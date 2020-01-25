@@ -2,6 +2,16 @@ import React from 'react'
 import styled from '@emotion/styled'
 import Theme from '../styles/theme'
 import { Container } from '../styles/styled-layout'
+import { ListUnstyled } from '../styles/styled-lists'
+import { IconContext } from 'react-icons'
+import {
+	FaFacebookF,
+	FaTwitter,
+	FaLinkedinIn,
+	FaInstagram,
+	FaYoutube
+} from 'react-icons/fa'
+
 const Footer = () => (
 	<FooterWrapper>
 		<Container>
@@ -9,13 +19,29 @@ const Footer = () => (
 				<div>
 					<h3>Challenge the mind and the body will follow.</h3>
 					<p>Connect with us:</p>
-					<ul>
-						<li>facebook</li>
-						<li>twitter</li>
-						<li>linkedin</li>
-						<li>instagram</li>
-						<li>youtube</li>
-					</ul>
+					<IconContext.Provider
+						value={{
+							color: Theme.colors.primary,
+							size: '1.625rem'
+						}}>
+						<ListUnstyled inline>
+							<li>
+								<FaFacebookF />
+							</li>
+							<li>
+								<FaTwitter />
+							</li>
+							<li>
+								<FaLinkedinIn />
+							</li>
+							<li>
+								<FaInstagram />
+							</li>
+							<li>
+								<FaYoutube />
+							</li>
+						</ListUnstyled>
+					</IconContext.Provider>
 				</div>
 				<div>
 					<p>
@@ -47,6 +73,7 @@ const FooterWrapper = styled.footer`
 `
 
 const Columns = styled.div`
+	text-align: center;
 	@media (min-width: 1024px) {
 		display: flex;
 		align-items: center;
