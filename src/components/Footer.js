@@ -25,11 +25,13 @@ const Footer = () => (
 					<SocialMedia />
 				</div>
 				<div>
-					<SubscribeText>
-						Subscribe to Mindset Fitness and receive free tips, recipes, updates
-						and more.
-					</SubscribeText>
-					<Form />
+					<div>
+						<SubscribeText>
+							Subscribe to Mindset Fitness and receive free tips, <br />
+							recipes, updates and more.
+						</SubscribeText>
+						<Form />
+					</div>
 				</div>
 			</TwoColumns>
 			<Nav>
@@ -95,6 +97,9 @@ const FooterWrapper = styled.footer`
 	padding: 2.8125rem 0;
 	background-color: ${Theme.colors.dark};
 	color: ${Theme.colors.primary};
+	> div > div > div > div {
+		padding: 0 10%;
+	}
 `
 
 const Nav = styled.nav`
