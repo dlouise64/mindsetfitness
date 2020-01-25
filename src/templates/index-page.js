@@ -34,12 +34,57 @@ export const IndexPageTemplate = ({ title, heading, subheading }) => (
 						live a healthier, happier, more energised life.
 					</p>
 					<p>Boxes here</p>
+					<br />
+					<br />
+					<br />
+					<br />
+					<br />
+					<br />
+					<br />
+					<br />
+					<br />
+					<br />
+					<br />
+					<br />
+					<br />
+					<br />
+					<br />
+					<br />
+					<br />
+					<br />
 					<p>Button here</p>
 				</Compact>
 			</Container>
 		</Section>
-		<Section>
-			<Container>Testimonial Quotes</Container>
+		<Section blue centered>
+			<Container>
+				<Compact>
+					<h2>
+						We have helped many people change their mindset and feel better for
+						it. Real results. Real quotes. Real people.
+					</h2>
+					<p>
+						Quotes here
+						<br />
+						<br />
+						<br />
+						<br />
+						<br />
+						<br />
+						<br />
+						<br />
+						<br />
+						<br />
+						<br />
+						<br />
+						<br />
+						<br />
+						<br />
+						<br />
+						<br />
+					</p>
+				</Compact>
+			</Container>
 		</Section>
 		<Section>
 			<Container>Testimonial Carousel</Container>

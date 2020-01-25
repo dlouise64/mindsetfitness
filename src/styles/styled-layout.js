@@ -1,5 +1,6 @@
 import styled from '@emotion/styled'
 import DarkBG from '../img/backgrounds/dark_pattern.png'
+import BlueBG from '../img/backgrounds/testimonial_section_bg_1920px.jpg'
 import Theme from '../styles/theme'
 export const Container = styled.div`
 	margin: 0 5%;
@@ -14,11 +15,16 @@ export const Container = styled.div`
 `
 export const Section = styled.section`
 	padding: 3.125rem 0;
-	background: url(${props => (props.dark ? DarkBG : '')}) repeat center;
+	background-image: url(${props =>
+		props.dark ? DarkBG : props.blue ? BlueBG : ''});
+	background-repeat: ${props => (props.dark ? 'repeat' : 'no-repeat')};
+	background-position-x: center;
+
 	background-color: ${Theme.colors.darkGrey};
 	text-align: ${props => (props.centered ? 'center' : 'left')};
 	h2 {
-		color: ${props => (props.dark ? Theme.colors.primary : 'white')};
+		color: ${props =>
+			props.dark ? Theme.colors.primary : Theme.colors.darkGrey};
 		margin-bottom: ${Theme.margins.md};
 	}
 	p {
