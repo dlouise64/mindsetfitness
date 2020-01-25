@@ -47,11 +47,12 @@ const FooterWrapper = styled.footer`
 `
 
 const Columns = styled.div`
-	display: flex;
-	align-items: center;
-
-	> div {
-		flex: 1;
+	@media (min-width: 1024px) {
+		display: flex;
+		align-items: center;
+		> div {
+			flex: 1;
+		}
 	}
 `
 export default Footer
