@@ -1,9 +1,9 @@
 ---
 templateKey: index-page
-title: Great coffee with a conscience
+title: Mindset Fitness is a health and fitness training & coaching organisation.
 image: /img/home-jumbotron.jpg
-heading: Great coffee with a conscience
-subheading: Support sustainable farming while enjoying a cup
+heading: Challenge the mind and the body will follow.
+subheading: Subscribe to Mindset Fitness for free tips, recipes, updates and more.
 mainpitch:
   title: Why Kaldi
   description: >
