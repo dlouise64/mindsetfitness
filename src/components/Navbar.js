@@ -22,15 +22,7 @@ const NavBar = () => {
 						<img src={Logo} alt="Mindset Fitness" />
 					</div>
 					<div>
-						<DesktopMenu>
-							<ListUnstyled>
-								<li>About</li>
-								<li>Team</li>
-								<li>Services</li>
-								<li>Testimonials</li>
-								<li>Contact</li>
-							</ListUnstyled>
-						</DesktopMenu>
+						<MainMenu device="desktop" />
 						<MobileNavButton onClick={() => handleClick()}>
 							<HamburgerMenu
 								isOpen={showMenu}
@@ -48,15 +40,45 @@ const NavBar = () => {
 				</TwoColumns>
 			</Container>
 
-			{showMenu && <MobileNav>Hello</MobileNav>}
+			{showMenu && (
+				<MobileNav>
+					<MainMenu device="mobile" />
+				</MobileNav>
+			)}
 		</Nav>
 	)
 }
 
-const DesktopMenu = styled.div`
-	display: none;
+const MainMenu = props => (
+	<MainMenuWrapper device={props.device}>
+		<ListUnstyled>
+			<li>About</li>
+			<li>Team</li>
+			<li>Services</li>
+			<li>Testimonials</li>
+			<li>Contact</li>
+		</ListUnstyled>
+	</MainMenuWrapper>
+)
+const MainMenuWrapper = styled.div`
+	display: ${props => (props.device === 'desktop' ? 'none' : 'block')};
+	ul {
+		text-align: center;
+		padding-top: 15%;
+		li {
+			padding-top: 1.875rem;
+			font-size: 1.25rem;
+		}
+	}
 	@media (min-width: 1024px) {
 		display: block;
+		ul {
+			padding-top: 0;
+			li {
+				padding-top: 0;
+				font-size: 1rem;
+			}
+		}
 	}
 `
 const MobileNavButton = styled.div`
@@ -78,6 +100,10 @@ const MobileNav = styled.div`
 	background: black;
 	color: white;
 	animation: 0.3s fadeIn ease;
+
+	@media (min-width: 1024px) {
+		display: none;
+	}
 
 	@keyframes fadeIn {
 		0% {

@@ -5,7 +5,7 @@ export const ListUnstyled = styled.ul`
 	li {
 		display: block;
 	}
-	@media (min-width: 768px) {
+	@media (min-width: 1024px) {
 		display: flex;
 		align-items: stretch;
 		justify-content: space-between;
