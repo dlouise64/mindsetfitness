@@ -42,7 +42,7 @@ const NavBar = () => {
 
 			{showMenu && (
 				<MobileNav>
-					<MainMenu device="mobile" />
+					<MainMenu />
 				</MobileNav>
 			)}
 		</Nav>
@@ -61,7 +61,8 @@ const MainMenu = props => (
 	</MainMenuWrapper>
 )
 const MainMenuWrapper = styled.div`
-	display: ${props => (props.device === 'desktop' ? 'none' : 'block')};
+	display: ${props =>
+		props.device && props.device === 'desktop' ? 'none' : 'block'};
 	ul {
 		text-align: center;
 		padding-top: 15%;
@@ -86,6 +87,7 @@ const MobileNavButton = styled.div`
 	top: 0.6875rem;
 	right: 5%;
 	z-index: 1;
+	cursor: pointer;
 	@media (min-width: 1024px) {
 		display: none;
 	}
