@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from '@emotion/styled'
 import Theme from '../styles/theme'
-import { Container } from '../styles/styled-layout'
+import { Container, TwoColumns } from '../styles/styled-layout'
 import { ListUnstyled } from '../styles/styled-lists'
 import { InputText } from '../styles/styled-form'
 import { Button } from '../styles/styled-button'
@@ -19,7 +19,7 @@ import {
 const Footer = () => (
 	<FooterWrapper>
 		<Container>
-			<Columns>
+			<TwoColumns>
 				<div>
 					<h3>Challenge the mind and the body will follow.</h3>
 					<SocialMedia />
@@ -31,7 +31,7 @@ const Footer = () => (
 					</SubscribeText>
 					<Form />
 				</div>
-			</Columns>
+			</TwoColumns>
 			<Nav>
 				<ListUnstyled inline>
 					<li>About</li>
@@ -95,18 +95,6 @@ const FooterWrapper = styled.footer`
 	padding: 2.8125rem 0;
 	background-color: ${Theme.colors.dark};
 	color: ${Theme.colors.primary};
-`
-
-const Columns = styled.div`
-	text-align: center;
-	@media (min-width: 1024px) {
-		display: flex;
-		align-items: center;
-		> div {
-			flex: 1;
-			padding: 0 4%;
-		}
-	}
 `
 
 const Nav = styled.nav`
