@@ -20,7 +20,7 @@ export const Section = styled.section`
 	background-repeat: ${props => (props.dark ? 'repeat' : 'no-repeat')};
 	background-position-x: center;
 
-	background-color: ${Theme.colors.darkGrey};
+	background-color: ${props => (props.white ? 'white' : Theme.colors.darkGrey)};
 	text-align: ${props => (props.centered ? 'center' : 'left')};
 	h2 {
 		color: ${props =>

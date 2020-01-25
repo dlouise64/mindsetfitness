@@ -78,15 +78,11 @@ export const IndexPageTemplate = ({ title, heading, subheading }) => (
 						<br />
 						<br />
 						<br />
-						<br />
-						<br />
-						<br />
-						<br />
 					</p>
 				</Compact>
 			</Container>
 		</Section>
-		<Section>
+		<Section white centered>
 			<Container>Testimonial Carousel</Container>
 		</Section>
 	</>
