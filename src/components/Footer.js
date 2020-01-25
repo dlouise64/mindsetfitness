@@ -33,6 +33,9 @@ const Footer = () => (
 						<li>Contact</li>
 					</ul>
 				</nav>
+				<div>
+					<small>Copyright © Mindset Fitness 2014 - 2020</small>
+				</div>
 			</Columns>
 		</Container>
 	</FooterWrapper>
