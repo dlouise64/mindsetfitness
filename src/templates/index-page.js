@@ -6,7 +6,7 @@ import ImageBackground from '../img/backgrounds/1920px_1080px.jpg'
 import Layout from '../components/Layout'
 import Theme from '../styles/theme'
 import { Container, Section } from '../styles/styled-layout'
-
+import NavBar from '../components/Navbar'
 export const IndexPageTemplate = ({
 	image,
 	title,
@@ -17,7 +17,9 @@ export const IndexPageTemplate = ({
 	intro
 }) => (
 	<>
-		<MainHeader></MainHeader>
+		<MainHeader>
+			<NavBar />
+		</MainHeader>
 		<Section>
 			<Container>Services</Container>
 		</Section>
