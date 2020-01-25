@@ -3,7 +3,11 @@ import styled from '@emotion/styled'
 export const Container = styled.div`
 	margin: 0 5%;
 
-	@media (min-width: 1440px) {
+	@media (min-width: 768px) {
+		margin: 0 5%;
+	}
+
+	@media (min-width: 1024px) {
 		margin: 0 15%;
 	}
 `
@@ -18,7 +22,6 @@ export const TwoColumns = styled.div`
 		> div {
 			position: relative;
 			flex: 1;
-			padding: 0 4%;
 		}
 	}
 `

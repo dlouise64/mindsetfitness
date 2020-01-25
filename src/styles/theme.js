@@ -7,6 +7,15 @@ const Theme = {
 	fonts: {
 		cursive: 'Crimson Text, sans-serif',
 		regular: 'Oxygen, sans-serif'
+	},
+	fontSize: {
+		regular: '1rem',
+		h1: '1.25rem'
+	},
+	margins: {
+		sm: '0.625rem',
+		md: '1.875rem',
+		lg: '3.125rem'
 	}
 }
 
