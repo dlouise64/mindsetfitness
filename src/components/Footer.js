@@ -55,34 +55,31 @@ const Form = () => (
 	</>
 )
 
-const SocialMedia = () => (
-	<SocialMediaWrapper>
-		<p>Connect with us:</p>
-		<IconContext.Provider
-			value={{
-				color: Theme.colors.primary,
-				size: '1.625rem'
-			}}>
-			<ListUnstyled inline>
-				<li>
-					<FaFacebookF />
-				</li>
-				<li>
-					<FaTwitter />
-				</li>
-				<li>
-					<FaLinkedinIn />
-				</li>
-				<li>
-					<FaInstagram />
-				</li>
-				<li>
-					<FaYoutube />
-				</li>
-			</ListUnstyled>
-		</IconContext.Provider>
-	</SocialMediaWrapper>
-)
+const SocialMedia = () => {
+	const icons = [
+		<FaFacebookF />,
+		<FaTwitter />,
+		<FaLinkedinIn />,
+		<FaInstagram />,
+		<FaYoutube />
+	]
+	return (
+		<SocialMediaWrapper>
+			<p>Connect with us:</p>
+			<IconContext.Provider
+				value={{
+					color: Theme.colors.primary,
+					size: '1.625rem'
+				}}>
+				<ListUnstyled inline>
+					{icons.map((item, key) => (
+						<li key={key}>{item}</li>
+					))}
+				</ListUnstyled>
+			</IconContext.Provider>
+		</SocialMediaWrapper>
+	)
+}
 
 const SocialMediaWrapper = styled.div`
 	margin-top: 3.125rem;
