@@ -12,7 +12,7 @@ export const Section = styled.section`
 `
 export const TwoColumns = styled.div`
 	text-align: center;
-	@media (min-width: 1024px) {
+	@media (min-width: 768px) {
 		display: flex;
 		align-items: center;
 		> div {

@@ -108,6 +108,10 @@ const Nav = styled.nav`
 	color: white;
 	margin: 0 10%;
 	font-family: ${Theme.fonts.cursive};
+	@media (min-width: 768px) {
+		padding-left: 15%;
+		padding-right: 15%;
+	}
 `
 
 const Copyright = styled.div`

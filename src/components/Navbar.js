@@ -71,7 +71,7 @@ const MainMenuWrapper = styled.div`
 			font-size: 1.25rem;
 		}
 	}
-	@media (min-width: 1024px) {
+	@media (min-width: 768px) {
 		display: block;
 		ul {
 			padding-top: 0;
@@ -88,7 +88,7 @@ const MobileNavButton = styled.div`
 	right: 5%;
 	z-index: 1;
 	cursor: pointer;
-	@media (min-width: 1024px) {
+	@media (min-width: 768px) {
 		display: none;
 	}
 `
@@ -103,7 +103,7 @@ const MobileNav = styled.div`
 	color: white;
 	animation: 0.3s fadeIn ease;
 
-	@media (min-width: 1024px) {
+	@media (min-width: 768px) {
 		display: none;
 	}
 
