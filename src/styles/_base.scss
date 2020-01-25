@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css?family=Crimson+Text&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Oxygen:300,400,700&display=swap');
+
 * {
 	margin: 0;
 	padding: 0;
@@ -11,4 +14,12 @@
 
 html {
 	box-sizing: border-box;
+}
+
+body {
+	font-family: Oxygen, sans-serif;
+}
+
+h2 {
+	font-family: 'Crimson Text', sans-serif;
 }
