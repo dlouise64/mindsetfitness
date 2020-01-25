@@ -24,19 +24,19 @@ const Footer = () => (
 					</p>
 					<div>Form</div>
 				</div>
-				<nav>
-					<ul>
-						<li>About</li>
-						<li>Team</li>
-						<li>Services</li>
-						<li>Testimonials</li>
-						<li>Contact</li>
-					</ul>
-				</nav>
-				<div>
-					<small>Copyright © Mindset Fitness 2014 - 2020</small>
-				</div>
 			</Columns>
+			<nav>
+				<ul>
+					<li>About</li>
+					<li>Team</li>
+					<li>Services</li>
+					<li>Testimonials</li>
+					<li>Contact</li>
+				</ul>
+			</nav>
+			<div>
+				<small>Copyright © Mindset Fitness 2014 - 2020</small>
+			</div>
 		</Container>
 	</FooterWrapper>
 )
