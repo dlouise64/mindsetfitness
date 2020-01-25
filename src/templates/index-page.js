@@ -5,18 +5,10 @@ import styled from '@emotion/styled'
 import ImageBackground from '../img/backgrounds/1920px_1080px.jpg'
 import Layout from '../components/Layout'
 import Theme from '../styles/theme'
-import { Container, Section, TwoColumns } from '../styles/styled-layout'
+import { Container, Section, Compact } from '../styles/styled-layout'
 import NavBar from '../components/Navbar'
 
-export const IndexPageTemplate = ({
-	image,
-	title,
-	heading,
-	subheading,
-	mainpitch,
-	description,
-	intro
-}) => (
+export const IndexPageTemplate = ({ title, heading, subheading }) => (
 	<>
 		<MainHeader>
 			<NavBar />
@@ -28,13 +20,69 @@ export const IndexPageTemplate = ({
 				</Hero>
 			</Container>
 		</MainHeader>
-		<Section>
-			<Container>Services</Container>
+		<Section dark centered>
+			<Container>
+				<Compact>
+					<h2>
+						Thinking about getting fit but can't quite find the energy or
+						motivation? We can't wait to change your mindset.
+					</h2>
+					<p>
+						Our services address your current lifestyle, mindset and mental
+						blocks with tailored coaching that gets results. No strict diets. No
+						standard routines. Just the education and inspiration you need to
+						live a healthier, happier, more energised life.
+					</p>
+					<p>Boxes here</p>
+					<br />
+					<br />
+					<br />
+					<br />
+					<br />
+					<br />
+					<br />
+					<br />
+					<br />
+					<br />
+					<br />
+					<br />
+					<br />
+					<br />
+					<br />
+					<br />
+					<br />
+					<br />
+					<p>Button here</p>
+				</Compact>
+			</Container>
 		</Section>
-		<Section>
-			<Container>Testimonial Quotes</Container>
+		<Section blue centered>
+			<Container>
+				<Compact>
+					<h2>
+						We have helped many people change their mindset and feel better for
+						it. Real results. Real quotes. Real people.
+					</h2>
+					<p>
+						Quotes here
+						<br />
+						<br />
+						<br />
+						<br />
+						<br />
+						<br />
+						<br />
+						<br />
+						<br />
+						<br />
+						<br />
+						<br />
+						<br />
+					</p>
+				</Compact>
+			</Container>
 		</Section>
-		<Section>
+		<Section white centered>
 			<Container>Testimonial Carousel</Container>
 		</Section>
 	</>
@@ -94,15 +142,9 @@ const Hero = styled.div`
 	}
 `
 IndexPageTemplate.propTypes = {
-	image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
 	title: PropTypes.string,
 	heading: PropTypes.string,
-	subheading: PropTypes.string,
-	mainpitch: PropTypes.object,
-	description: PropTypes.string,
-	intro: PropTypes.shape({
-		blurbs: PropTypes.array
-	})
+	subheading: PropTypes.string
 }
 
 const IndexPage = ({ data }) => {
@@ -111,13 +153,9 @@ const IndexPage = ({ data }) => {
 	return (
 		<Layout>
 			<IndexPageTemplate
-				image={frontmatter.image}
 				title={frontmatter.title}
 				heading={frontmatter.heading}
 				subheading={frontmatter.subheading}
-				mainpitch={frontmatter.mainpitch}
-				description={frontmatter.description}
-				intro={frontmatter.intro}
 			/>
 		</Layout>
 	)
@@ -138,34 +176,8 @@ export const pageQuery = graphql`
 		markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
 			frontmatter {
 				title
-				image {
-					childImageSharp {
-						fluid(maxWidth: 2048, quality: 100) {
-							...GatsbyImageSharpFluid
-						}
-					}
-				}
 				heading
 				subheading
-				mainpitch {
-					title
-					description
-				}
-				description
-				intro {
-					blurbs {
-						image {
-							childImageSharp {
-								fluid(maxWidth: 240, quality: 64) {
-									...GatsbyImageSharpFluid
-								}
-							}
-						}
-						text
-					}
-					heading
-					description
-				}
 			}
 		}
 	}
