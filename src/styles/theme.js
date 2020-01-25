@@ -2,7 +2,8 @@ const Theme = {
 	colors: {
 		dark: '#212121',
 		primary: '#c8ebfb',
-		secondary: '#85e1f3'
+		secondary: '#85e1f3',
+		darkGrey: '#212121'
 	},
 	fonts: {
 		cursive: 'Crimson Text, sans-serif',
